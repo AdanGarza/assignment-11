@@ -10,10 +10,6 @@
 #include <string>
 using namespace std;
 
-// ============================================================
-// CLASS: Address  (used for composition in Shelter)
-// This class is fully implemented. Study it.
-// ============================================================
 class Address
 {
 public:
@@ -50,10 +46,6 @@ Address::Address(string s, string c, string st)
 // ============================================================
 // CLASS: Animal  (BASE CLASS)
 // ============================================================
-// Protected data members (derived classes can access directly):
-//   string name       - the animal's name
-//   int    age        - age in years
-//   string animalType - e.g. "Dog", "Cat"
 //
 // You must implement:
 //   setInfo()    - sets name, age, animalType
@@ -123,7 +115,6 @@ void Animal::print() const
 // ============================================================
 // CLASS: Dog  (DERIVED from Animal)
 // ============================================================
-// Dog IS-A Animal. Adds: string breed
 //
 // You must implement:
 //   setBreed() / getBreed()
@@ -145,9 +136,7 @@ private:
 };
 
 // TODO: Write Dog member function definitions here.
-// Constructor hint:
-//   Dog::Dog(string n, int a, string b) : Animal(n, a, "Dog")
-//   { breed = b; }
+
 
 Dog::Dog(string name, int age, string breed)
     : Animal(name, age, "Dog")
@@ -175,8 +164,6 @@ void Dog::print() const
 // ============================================================
 // CLASS: Cat  (DERIVED from Animal)
 // ============================================================
-// Cat IS-A Animal. Adds: bool isIndoor
-//
 // You must implement:
 //   setIndoor() / getIndoor()
 //   print()  - call Animal::print() first, then print Indoor: Yes/No
